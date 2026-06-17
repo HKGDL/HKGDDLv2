@@ -1,0 +1,288 @@
+.page-account {
+  display: block;
+}
+.account-login-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+.account-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-background-hover);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+}
+.account-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-background-hover);
+}
+.account-tabs button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  color: var(--color-on-background);
+  opacity: 0.5;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+.account-tabs button.active {
+  opacity: 1;
+  border-bottom-color: var(--color-primary);
+}
+.account-tabs button:hover {
+  opacity: 0.8;
+}
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.account-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.account-form input {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  outline: none;
+}
+.account-form input:focus {
+  border-color: var(--color-primary);
+}
+.account-password-wrap {
+  display: flex;
+  gap: 0.5rem;
+}
+.account-password-wrap input {
+  flex: 1;
+}
+.account-pw-toggle {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.account-pw-toggle:hover {
+  background: var(--color-background-hover);
+}
+.account-btn {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.account-btn:hover {
+  opacity: 0.85;
+}
+.account-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.account-btn--small {
+  font-size: 13px;
+  padding: 0.5rem 1rem;
+}
+.account-forgot-link {
+  font-size: 13px;
+  color: var(--color-primary);
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.account-forgot-link:hover {
+  opacity: 1;
+}
+.account-msg {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+.account-msg.success {
+  background-color: #2e7d32;
+  color: white;
+}
+.account-msg.error {
+  background-color: #c62828;
+  color: white;
+}
+.account-dashboard {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.account-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.account-section h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-background-hover);
+}
+.account-section-header h2 {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.account-profile-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-background-hover);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+.account-profile-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-background-hover);
+}
+.account-profile-row:last-child {
+  border-bottom: none;
+}
+.account-profile-row > span:first-child {
+  width: 8rem;
+  opacity: 0.6;
+}
+.account-inline-edit {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+.account-inline-edit input {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  outline: none;
+  flex: 1;
+}
+.account-inline-edit input:focus {
+  border-color: var(--color-primary);
+}
+.account-claims-list {
+  margin-top: 1rem;
+}
+.account-claim-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-background-hover);
+}
+.account-claim-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+}
+.account-claim--pending {
+  background: #f57f17;
+  color: white;
+}
+.account-claim--approved {
+  background: #2e7d32;
+  color: white;
+}
+.account-claim--rejected {
+  background: #c62828;
+  color: white;
+}
+.account-notif-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-background-hover);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.account-notif-card:hover {
+  border-color: var(--color-primary);
+}
+.account-notif--unread {
+  border-left: 3px solid var(--color-primary);
+}
+.account-notif-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.account-notif-msg {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+.account-notif-date {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.account-sub-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.account-sub-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.nav__notif-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  margin-left: 4px;
+  vertical-align: middle;
+}

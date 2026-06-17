@@ -1,0 +1,59 @@
+{
+  "auth": "microsoft",
+  "host": "frenchify.hypixel.net",
+  "port": 25565,
+  "version": "1.8.9",
+  "enableFlagSounds": true,
+  "autoWhoEnabled": true,
+  "hypixelApiKey": "aedd44b1-206d-4c38-b9ba-d5dfa9e6d50e",
+  "seraphApiKey": "59a37ab0-1370-43e1-97b9-4b755bb41a39",
+  "winstreakKey": "0a927d2d-12bf-4638-b20b-3f8ddf2213aa",
+  "overlayGamemode": "bedwars",
+  "overlay": {
+    "mode": "all"
+  },
+  "OverlayEnabled": true,
+  "flagSniperEnabled": false,
+  "flagHackerEnabled": true,
+  "noSlowEnabled": true,
+  "nickMode": "OG",
+  "friendNick": "The_Polar_Kyle",
+  "blacklistEnabled": true,
+  "freshEnabled": true,
+  "featureToggles": {
+    "ping": {
+      "nametag": false
+    },
+    "seraph": {
+      "nametag": true
+    },
+    "flags": {
+      "nametag": true
+    }
+  },
+  "scaffoldEnabled": true,
+  "legitScaffEnabled": true,
+  "nukerEnabled": false,
+  "autoglEnabled": false,
+  "glMessage": "Good Luck.",
+  "partyTrackerEnabled": true,
+  "minStars": 100,
+  "minFkdr": 1,
+  "debugEnabled": true,
+  "chatCleanerEnabled": true,
+  "nickKeywords": [
+    "sniper"
+  ],
+  "numberDenickerEnabled": true,
+  "numberDenicker": {
+    "finals": {
+      "range": 200,
+      "max": 5
+    },
+    "beds": {
+      "range": 200,
+      "max": 5
+    }
+  },
+  "auroraApiKey": "bd791181-7015-3c0d-e27f-512e73bcbbe8"
+}

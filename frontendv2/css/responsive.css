@@ -1,0 +1,264 @@
+.hamburger {
+  display: none;
+}
+
+/* Mobile: < 768px */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    position: relative;
+  }
+  header .logo h2 { font-size: 1.25rem; }
+  header .logo p { font-size: 0.75rem; }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    z-index: 10;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2.5px;
+    background: var(--color-on-primary);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--color-primary);
+    padding: 0.5rem 1rem 1rem;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .nav.nav--open {
+    display: flex;
+  }
+  .nav .nav__tab {
+    padding: 0.6rem 0.5rem;
+  }
+  .nav .nav__tab .type-label-lg,
+  .nav .nav__actions .type-label-lg {
+    font-size: 0.9rem !important;
+  }
+  .nav .nav__actions {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 0.25rem;
+    flex: none;
+  }
+  .nav .nav__actions .nav__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
+  .nav .nav__actions .nav__icon img {
+    height: 1.25rem;
+  }
+  .nav .nav__actions .nav__cta {
+    padding: 0.5rem 0.75rem;
+    margin-left: 0;
+    font-size: 0.85rem !important;
+  }
+
+  header, main {
+    grid-template-columns: 1fr;
+  }
+  main > div {
+    overflow-y: visible;
+  }
+  main {
+    height: auto;
+    flex: none;
+  }
+
+  .spinner {
+    grid-column: 1;
+  }
+
+  .page-list .list-container {
+    grid-column: 1;
+    padding: 0.5rem;
+  }
+  .page-list .list {
+    display: block;
+  }
+  .page-list .list tr {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-background-hover);
+  }
+  .page-list .list .rank {
+    padding: 0;
+    min-width: 2.5rem;
+  }
+  .page-list .list .points {
+    display: none;
+  }
+  .page-list .list .level {
+    flex: 1;
+  }
+  .page-list .list .level button {
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+  .page-list .level-container,
+  .page-list .meta-container {
+    display: none;
+  }
+  .page-list .level-detail-page {
+    grid-column: 1;
+    padding: 1rem;
+  }
+  .page-list .level-container .level {
+    padding-right: 0.5rem;
+    max-width: 100%;
+  }
+  .page-list .level-container .level .video {
+    width: 100%;
+    max-width: 100%;
+  }
+  .page-list .level-container .level .stats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .page-leaderboard {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .page-leaderboard .board-container {
+    padding-inline: 0.5rem;
+  }
+  .page-leaderboard .board .total {
+    display: none;
+  }
+  .page-leaderboard .player {
+    padding-right: 0.5rem;
+  }
+  .page-leaderboard .player-container {
+    grid-row: auto;
+  }
+  .page-leaderboard .board-container {
+    grid-row: auto;
+  }
+
+  .submit-container {
+    padding: 1rem;
+  }
+
+  .account-dashboard {
+    padding: 1rem;
+  }
+  .account-profile-row {
+    flex-wrap: wrap;
+  }
+  .account-profile-row > span:first-child {
+    width: 100%;
+  }
+  .account-sub-card {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .admin-dashboard {
+    padding: 1rem;
+  }
+
+  .mod-container {
+    padding: 1rem;
+  }
+
+  .changelog-container {
+    padding: 1rem;
+  }
+
+  .page-roulette .sidebar {
+    grid-column: 1;
+  }
+  .page-roulette .levels-container {
+    grid-column: 1;
+    grid-row: auto;
+    padding-right: 0.5rem;
+  }
+  .page-roulette .levels .level {
+    grid-template-columns: 1fr;
+  }
+  .page-roulette .levels .level .actions {
+    grid-column: 1;
+  }
+  .page-roulette .toasts-container {
+    grid-column: 1;
+    margin-right: 0;
+  }
+}
+
+/* Phone: < 480px */
+@media (max-width: 480px) {
+  .nav .nav__tab {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.3rem;
+  }
+  .nav .nav__actions .nav__cta {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem !important;
+  }
+
+  .account-tabs button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  .account-inline-edit {
+    flex-wrap: wrap;
+  }
+
+  .admin-level-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .table, .board, .list, .records, .admin-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* All tables should scroll on narrow screens */
+.table, .board, .records, .admin-table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

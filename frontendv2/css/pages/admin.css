@@ -1,0 +1,293 @@
+.page-admin {
+  display: block;
+}
+.admin-login-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+.admin-login-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-background-hover);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 24rem;
+}
+.admin-login-card h1 {
+  margin-bottom: 1.5rem;
+}
+.admin-login-card .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.admin-login-card input {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  outline: none;
+}
+.admin-login-card input:focus {
+  border-color: var(--color-primary);
+}
+.admin-password-wrap {
+  display: flex;
+  gap: 0.5rem;
+}
+.admin-password-wrap input {
+  flex: 1;
+}
+.admin-password-toggle {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.admin-password-toggle:hover {
+  background: var(--color-background-hover);
+}
+.admin-submit-btn {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.admin-submit-btn:hover {
+  opacity: 0.85;
+}
+.admin-submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.admin-submit-btn--accept {
+  background: #2e7d32;
+}
+.admin-submit-btn--reject {
+  background: #c62828;
+}
+.admin-submit-btn--reject:hover {
+  opacity: 0.85;
+}
+.admin-dashboard {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.admin-section h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-background-hover);
+}
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.admin-stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-background-hover);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.admin-stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.admin-msg {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+.admin-msg.success {
+  background-color: #2e7d32;
+  color: white;
+}
+.admin-msg.error {
+  background-color: #c62828;
+  color: white;
+}
+.admin-search-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.admin-search-bar input,
+.admin-search-bar select {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  padding: 0.625rem 1rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  outline: none;
+}
+.admin-search-bar input {
+  flex: 1;
+}
+.admin-search-bar input:focus,
+.admin-search-bar select:focus {
+  border-color: var(--color-primary);
+}
+.admin-loading {
+  text-align: center;
+  padding: 2rem;
+  opacity: 0.6;
+}
+.admin-level-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-background-hover);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+.admin-level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.admin-level-name {
+  display: flex;
+  align-items: center;
+}
+.admin-level-rec-count {
+  font-size: 13px;
+  opacity: 0.5;
+  white-space: nowrap;
+}
+.admin-record-list {
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--color-background-hover);
+  padding-top: 0.5rem;
+}
+.admin-record-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.375rem 0;
+  border-bottom: 1px solid var(--color-background-hover);
+}
+.admin-record-row:last-child {
+  border-bottom: none;
+}
+.admin-record-delete {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.admin-record-delete:hover {
+  opacity: 1;
+}
+.admin-inline-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.admin-inline-form input,
+.admin-inline-form select {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  outline: none;
+  flex: 1;
+  min-width: 120px;
+}
+.admin-inline-form input:focus,
+.admin-inline-form select:focus {
+  border-color: var(--color-primary);
+}
+.admin-table {
+  width: 100%;
+  table-layout: fixed;
+}
+.admin-table th {
+  text-align: start;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-background-hover);
+}
+.admin-table td {
+  padding-block: 0.5rem;
+}
+.admin-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.admin-page-btn {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-background-hover);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-on-background);
+  cursor: pointer;
+}
+.admin-page-btn:hover:not(:disabled) {
+  background: var(--color-background-hover);
+}
+.admin-page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.sync-progress-bar {
+  width: 100%;
+  height: 1.25rem;
+  background: var(--color-background-hover);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.sync-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 0.5rem;
+  transition: width 0.3s ease;
+}
+.sync-progress-text {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--color-on-background);
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>HKGD Demon List</title>
+        <link rel="icon" href="/list_icon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/css/typography.css" />
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/list.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/leaderboard.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/roulette.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/mod.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/changelog.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/submit.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/admin.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/account.css" />
+        <link rel="stylesheet" type="text/css" href="/css/pages/reset-password.css" />
+        <link rel="stylesheet" type="text/css" href="/css/components/nav.css" />
+        <link rel="stylesheet" type="text/css" href="/css/components/btn.css" />
+        <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+        <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
+        <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
+        <script type="module" src="/js/main.js"></script>
+    </head>
+    <body id="app">
+        <header :class="{ dark: store.dark }">
+            <div class="logo">
+                <h2>HKGD</h2>
+                <p>Demon List</p>
+            </div>
+            <button class="hamburger" :class="{ open: navOpen }" @click="toggleNav" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav v-if="store.isAdmin" class="nav nav--admin" :class="{ 'nav--open': navOpen }">
+                <router-link class="nav__tab" to="/admin/dashboard">
+                    <span class="type-label-lg">Dashboard</span>
+                </router-link>
+                <router-link class="nav__tab" to="/admin/records">
+                    <span class="type-label-lg">Records</span>
+                </router-link>
+                <router-link class="nav__tab" to="/admin/submissions">
+                    <span class="type-label-lg">Submissions</span>
+                </router-link>
+                <router-link class="nav__tab" to="/admin/mappings">
+                    <span class="type-label-lg">Mappings</span>
+                </router-link>
+                <router-link class="nav__tab" to="/admin/claims">
+                    <span class="type-label-lg">Claims</span>
+                </router-link>
+                <router-link class="nav__tab" to="/admin/changelog">
+                    <span class="type-label-lg">Changelog</span>
+                </router-link>
+                <div class="nav__actions">
+                    <button class="nav__icon" @click.prevent="store.toggleDark()">
+                        <img :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'" alt="" />
+                    </button>
+                    <a class="nav__cta type-label-lg" @click.prevent="onAdminLogout">Logout</a>
+                </div>
+            </nav>
+            <nav v-else-if="userStore.user" class="nav nav--user" :class="{ 'nav--open': navOpen }">
+                <router-link class="nav__tab" to="/">
+                    <span class="type-label-lg">List</span>
+                </router-link>
+                <router-link class="nav__tab" to="/leaderboard">
+                    <span class="type-label-lg">Leaderboard</span>
+                </router-link>
+                <router-link class="nav__tab" to="/roulette">
+                    <span class="type-label-lg">Roulette</span>
+                </router-link>
+                <router-link class="nav__tab" to="/mod">
+                    <span class="type-label-lg">Mod</span>
+                </router-link>
+                <router-link class="nav__tab" to="/changelog">
+                    <span class="type-label-lg">Changelog</span>
+                </router-link>
+                <div class="nav__actions">
+                    <a class="nav__cta type-label-lg" href="#/submit">Submit</a>
+                    <button class="nav__icon" @click.prevent="store.toggleDark()">
+                        <img :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'" alt="" />
+                    </button>
+                    <a class="nav__icon" href="https://discord.gg/tMxDPKn" target="_blank">
+                        <img src="/assets/discord.svg" alt="Discord" />
+                    </a>
+                    <a class="nav__cta type-label-lg" href="#/account">
+                        {{ userStore.user.displayName }}
+                        <span v-if="userStore.unreadCount > 0" class="nav__notif-badge">{{ userStore.unreadCount }}</span>
+                    </a>
+                </div>
+            </nav>
+            <nav v-else class="nav" :class="{ 'nav--open': navOpen }">
+                <router-link class="nav__tab" to="/">
+                    <span class="type-label-lg">List</span>
+                </router-link>
+                <router-link class="nav__tab" to="/leaderboard">
+                    <span class="type-label-lg">Leaderboard</span>
+                </router-link>
+                <router-link class="nav__tab" to="/roulette">
+                    <span class="type-label-lg">Roulette</span>
+                </router-link>
+                <router-link class="nav__tab" to="/mod">
+                    <span class="type-label-lg">Mod</span>
+                </router-link>
+                <router-link class="nav__tab" to="/changelog">
+                    <span class="type-label-lg">Changelog</span>
+                </router-link>
+                <div class="nav__actions">
+                    <a class="nav__cta type-label-lg" href="#/account">Login</a>
+                    <button class="nav__icon" @click.prevent="store.toggleDark()">
+                        <img :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'" alt="" />
+                    </button>
+                    <a class="nav__icon" href="https://discord.gg/tMxDPKn" target="_blank">
+                        <img src="/assets/discord.svg" alt="Discord" />
+                    </a>
+                    <a class="nav__cta type-label-lg" href="#/submit">Submit</a>
+                </div>
+            </nav>
+        </header>
+        <router-view :class="{ dark: store.dark }"></router-view>
+        <footer class="site-footer">
+            <p class="type-label-sm">Modified From TSL, Improved by HKGD Community</p>
+        </footer>
+    </body>
+</html>
